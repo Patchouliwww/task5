@@ -1,0 +1,37 @@
+# 交付仓库只保留可重新构建的工程文件；未列入下方清单的根目录内容均不上传。
+# 因此构建目录、旧工程目录、教程、示例视频、调参导出、编辑器配置及学习记录都留在本机。
+/*
+
+# Git规则、构建入口与可选的项目说明、许可证。
+!/.gitignore
+!/CMakeLists.txt
+!/README.md
+!/LICENSE
+
+# 两个可执行目标的源码及共用头文件；preprocess_viewer也是CMake构建所需源码。
+!/apps/
+!/include/
+!/src/
+
+# 源码目录内也不纳入生成文件、缓存和编辑器临时文件。
+build/
+.build/
+cmake-build-*/
+CMakeFiles/
+.cache/
+.vscode/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dll
+*.exe
+*.log
+*.tmp
+*.swp
+*.swo
+*~
